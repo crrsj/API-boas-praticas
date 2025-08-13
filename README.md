@@ -30,6 +30,6 @@ Spring Security: Framework de segurança padrão do ecossistema Spring para aute
 
 JWT (JSON Web Tokens): Implementado para criar um sistema de autenticação stateless (sem sessão), ideal para APIs REST.
 
-Documentação e Testes:
+Documentação :
 
 Swagger/OpenAPI 3: A API possui documentação automática e interativa com Swagger UI, disponível no endpoint /swagger-ui.html. Isso facilita a exploração e o teste de todos os endpoints.
