@@ -1,5 +1,5 @@
 API de Produtos
-Esta é uma API RESTful para gerenciamento de produtos, desenvolvida com Spring Boot. A aplicação foi construída com foco em boas práticas de desenvolvimento, segurança e manutenibilidade.
+Esta é uma API REST para gerenciamento de produtos, desenvolvida com Spring Boot. A aplicação foi construída com foco em boas práticas de desenvolvimento, segurança e manutenibilidade.
 
 🛠️ Tecnologias e Padrões de Projeto
 A API utiliza um conjunto moderno de tecnologias e segue padrões de projeto consolidados para garantir um código robusto e de alta qualidade:
