@@ -28,7 +28,7 @@ public class ProdutoServico {
     }
 
     public AtualizarProdutoDTO atualizarProduto(Long id,AtualizarProdutoDTO atualizarProdutoDTO){
-        var atualizar = produtoRepositorio.findById(id).orElseThrow(()->new ProdutoNaoEncontrado("Produto não encontrado"));
+        var atualizar = produtoRepositorio.findById(id).orElseThrow(()->new ProdutoNaoEncontrado("Produto não encontrado com o id: " + id));
         modelMapper.map(atualizarProdutoDTO,atualizar);
         var produtoAtualizado = produtoRepositorio.save(atualizar);
         return modelMapper.map(produtoAtualizado, AtualizarProdutoDTO.class);
@@ -37,7 +37,7 @@ public class ProdutoServico {
 
 
     public BuscarProdutoDTO buscarPorId(Long id){
-        var buscar = produtoRepositorio.findById(id).orElseThrow(()->new ProdutoNaoEncontrado("Produto não encontrado"));
+        var buscar = produtoRepositorio.findById(id).orElseThrow(()->new ProdutoNaoEncontrado("Produto não encontrado com o id: " + id));
         return modelMapper.map(buscar, BuscarProdutoDTO.class);
     }
 
@@ -49,7 +49,7 @@ public class ProdutoServico {
      if(produtoRepositorio.existsById(id)){
          produtoRepositorio.deleteById(id);
      }else{
-          throw new ProdutoNaoEncontrado("Produto não encontrado");
+          throw new ProdutoNaoEncontrado("Produto não encontrado com o id: " + id);
        
     }
 }
