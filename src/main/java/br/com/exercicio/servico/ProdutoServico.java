@@ -47,8 +47,9 @@ public class ProdutoServico {
 
     public void excluirProduto(Long id){
      if(produtoRepositorio.existsById(id)){
-         throw new ProdutoNaoEncontrado("Produto não encontrado");
-     }
-        produtoRepositorio.deleteById(id);
+         produtoRepositorio.deleteById(id);
+     }else{
+          throw new ProdutoNaoEncontrado("Produto não encontrado");
+       
     }
 }
