@@ -23,7 +23,7 @@ public class ProdutoServico {
 
     public CriarProdutoDTO criarProduto(CriarProdutoDTO criarProdutoDTO){
        var criar = modelMapper.map(criarProdutoDTO, Produto.class) ;
-       var produtoCroado = produtoRepositorio.save(criar);
+       var produtoCriado = produtoRepositorio.save(criar);
        return modelMapper.map(produtoCroado, CriarProdutoDTO.class);
     }
 
